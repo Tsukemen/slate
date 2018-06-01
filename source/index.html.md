@@ -8,6 +8,9 @@ toc_footers:
 includes:
   - payments
   - wallet
+  - data
+  - plain
+  - websocket
   - errors
 
 search: true
