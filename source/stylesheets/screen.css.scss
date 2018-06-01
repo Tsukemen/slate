@@ -49,7 +49,6 @@ html, body {
 
 .toc-wrapper {
   transition: left 0.3s ease-in-out;
-
   overflow-y: auto;
   overflow-x: hidden;
   position: fixed;
@@ -59,8 +58,9 @@ html, body {
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 400;
+  border-right: 1px solid rgba(0,0,0,0.1);
 
   // language selector for mobile devices
   .lang-selector {
@@ -75,31 +75,30 @@ html, body {
   .logo {
     display: block;
     max-width: 100%;
-    margin-bottom: $logo-margin;
+    margin: 36px;
+    height: 36px;
+    
   }
 
   &>.search {
     position: relative;
 
     input {
+      border: none;
       background: $nav-bg;
-      border-width: 0 0 1px 0;
-      border-color: $search-box-border-color;
-      padding: 6px 0 6px 20px;
+      padding: 10px 0 10px 0;
       box-sizing: border-box;
       margin: $nav-v-padding $nav-padding;
-      width: $nav-width - 30;
+      width: $nav-width - $nav-padding - $nav-padding;
       outline: none;
       color: $nav-text;
-      border-radius: 0; /* ios has a default border radius */
-    }
-
-    &:before {
-      position: absolute;
-      top: 17px;
-      left: $nav-padding;
-      color: $nav-text;
-      @extend %icon-search;
+      border-radius: 2px; /* ios has a default border radius */
+      transition: padding .5s ease;
+      
+      &:focus {
+          background-color: #dedede;
+          padding-left: 10px;
+      }
     }
   }
 
@@ -112,7 +111,8 @@ html, body {
     transition-property: height, margin;
     transition-duration: 180ms;
     transition-timing-function: ease-in-out;
-    background: $nav-subitem-bg;
+    background: inherit;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
     &.visible {
       height: 30%;
       margin-bottom: 1em;
@@ -120,7 +120,7 @@ html, body {
 
     li {
       margin: 1em $nav-padding;
-      line-height: 1;
+      line-height: 1.4;
     }
 
     a {
@@ -149,38 +149,48 @@ html, body {
     transition-property: background;
     transition-timing-function: linear;
     transition-duration: 200ms;
+    margin: 10px 0;
+    line-height: 40px;
   }
 
   // This is the currently selected ToC entry
   .toc-link.active {
     background-color: $nav-active-bg;
     color: $nav-active-text;
+    font-weight: 500;
   }
 
   // this is parent links of the currently selected ToC entry
   .toc-link.active-parent {
-    background-color: $nav-active-parent-bg;
-    color: $nav-active-parent-text;
+    background-color: none;
+    color: inherit;
+    border-left: 6px solid $nav-active-bg;
+    font-weight: 500;
   }
 
   .toc-list-h2 {
     display: none;
     background-color: $nav-subitem-bg;
-    font-weight: 500;
+    font-weight: 400;
   }
 
+  .toc-h2:hover {
+      text-decoration: underline;
+  }
+  
   .toc-h2 {
     padding-left: $nav-padding + $nav-indent;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .toc-footer {
     padding: 1em 0;
     margin-top: 1em;
-    border-top: 1px dashed $nav-footer-border-color;
+    border-top: 1px solid rgba(0,0,0,0.1);
 
     li,a {
-      color: $nav-text;
+      color: $nav-active-bg;
+      font-weight: 500;
       text-decoration: none;
     }
 
@@ -189,8 +199,8 @@ html, body {
     }
 
     li {
-      font-size: 0.8em;
-      line-height: 1.7;
+      font-size: 1em;
+      line-height: 2;
       text-decoration: none;
     }
   }
@@ -344,6 +354,10 @@ html, body {
     clear:both;
   }
 
+  a {
+    color: $nav-active-bg;
+  }
+
   h1 {
     @extend %header-font;
     font-size: 25px;
@@ -471,6 +485,7 @@ html, body {
 
     &.warning {
       background-color: $aside-warning-bg;
+      color: white;
     }
 
     &.success {
