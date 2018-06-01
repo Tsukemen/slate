@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -209,73 +209,495 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
-        </div>
+      <img src="images/logo.svg" class="logo" alt="Logo" />
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#developer-apis" class="toc-h1 toc-link" data-title="developer-apis">Developer APIs</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#payment-processing" class="toc-h1 toc-link" data-title="payment-processing">Payment Processing</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#introduction" class="toc-h2 toc-link" data-title="introduction">Introduction</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#requesting-an-api-key" class="toc-h2 toc-link" data-title="requesting-an-api-key">Requesting an API key</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#obtaining-an-extended-public-key-xpub" class="toc-h2 toc-link" data-title="obtaining-an-extended-public-key-xpub">Obtaining an Extended Public Key (xPub)</a>
+                  </li>
+                  <li>
+                    <a href="#generating-a-receiving-address" class="toc-h2 toc-link" data-title="generating-a-receiving-address">Generating a Receiving Address</a>
+                  </li>
+                  <li>
+                    <a href="#balance-updates" class="toc-h2 toc-link" data-title="balance-updates">Balance Updates</a>
+                  </li>
+                  <li>
+                    <a href="#block-notification" class="toc-h2 toc-link" data-title="block-notification">Block Notification</a>
+                  </li>
+                  <li>
+                    <a href="#implementing-the-callback" class="toc-h2 toc-link" data-title="implementing-the-callback">Implementing the Callback</a>
+                  </li>
+                  <li>
+                    <a href="#check-xpub-address-gap" class="toc-h2 toc-link" data-title="check-xpub-address-gap">Check xPub address gap</a>
+                  </li>
+                  <li>
+                    <a href="#callback-logs" class="toc-h2 toc-link" data-title="callback-logs">Callback Logs</a>
+                  </li>
+                  <li>
+                    <a href="#security" class="toc-h2 toc-link" data-title="security">Security</a>
+                  </li>
+                  <li>
+                    <a href="#currency-conversion" class="toc-h2 toc-link" data-title="currency-conversion">Currency Conversion</a>
+                  </li>
+                  <li>
+                    <a href="#double-spends-amp-chargebacks" class="toc-h2 toc-link" data-title="double-spends-amp-chargebacks">Double Spends &amp; Chargebacks</a>
+                  </li>
+                  <li>
+                    <a href="#address-expiration" class="toc-h2 toc-link" data-title="address-expiration">Address Expiration</a>
+                  </li>
+                  <li>
+                    <a href="#fair-usage" class="toc-h2 toc-link" data-title="fair-usage">Fair Usage</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#kittens" class="toc-h1 toc-link" data-title="kittens">Kittens</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="get-all-kittens">Get All Kittens</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="get-a-specific-kitten">Get a Specific Kitten</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="delete-a-specific-kitten">Delete a Specific Kitten</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#payment-processing" class="toc-h1 toc-link" data-title="payment-processing">Payment Processing</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#introduction" class="toc-h2 toc-link" data-title="introduction">Introduction</a>
+                  </li>
+                  <li>
+                    <a href="#requesting-an-api-key" class="toc-h2 toc-link" data-title="requesting-an-api-key">Requesting an API key</a>
+                  </li>
+                  <li>
+                    <a href="#obtaining-an-extended-public-key-xpub" class="toc-h2 toc-link" data-title="obtaining-an-extended-public-key-xpub">Obtaining an Extended Public Key (xPub)</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://api.blockchain.info/customer/signup'>Request an API key</a></li>
+            <li><a href='https://blockchain.com/wallet'>Get a free wallet</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
+        <h1 id='developer-apis'>Developer APIs</h1>
 <p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
 
 <p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
 <p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
+<h1 id='payment-processing'>Payment Processing</h1><h2 id='introduction'>Introduction</h2>
+<p>The Blockchain Receive Payments API V2 is the quickest and easiest way to begin accepting automated bitcoin payments. Consisting of just a simple HTTP GET request, you can be up and running in minutes.</p>
+
+<p>One of the difficulties involved with receiving bitcoin payments is the need to generate a unique address for each new user or invoice. These addresses need to monitored and stored securely. The blockchain receive payments API takes care of the generation and monitoring of addresses. We will notify your server using a simple callback whenever a payment is received.</p>
+<h2 id='requesting-an-api-key'>Requesting an API key</h2>
+<p>In order to use the Receive Payments API V2, please apply for an API key <a href="https://api.blockchain.info/v2/apikey/request/">here</a>. This API key is only for our Receive Payments API. You cannot use the standard blockchain wallet API key for Receive Payments V2, and vice versa.</p>
+<h2 id='obtaining-an-extended-public-key-xpub'>Obtaining an Extended Public Key (xPub)</h2>
+<p>This API requires you to have a BIP 32 account xPub in order to receive payments. The easiest way to start receiving payments is to open a <a href="https://blockchain.info/wallet/#/signup">Blockchain Wallet</a>. You should create a new account inside your wallet exclusively for transactions facilitated by this API. When making API calls, use the xPub for this account (located in <strong>Settings -&gt; Addresses -&gt; Manage -&gt; More Options -&gt; Show xPub</strong>).</p>
+<h2 id='generating-a-receiving-address'>Generating a Receiving Address</h2>
+<p>This method creates a unique address which should be presented to the customer. For any payments sent to this address, you will be sent an HTTP notification. Please note that every call to the server will increment the <code>index</code> parameter. This is done so you do not show the same address to two different customers. However, all funds will still show within the same account.</p>
+
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>Derive an unused address using your xPub:</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.blockchain.info/v2/receive?xpub=xpub6CWiJoiwxPQni3DFbrQNHWq8kwrL2J1HuBN7zm4xKPCZRmEshc7Dojz4zMah7E4o2GEEbD6HgfG7sQid186Fw9x9akMNKw2mu1PjqacTJB2&amp;callback=https%3A%2F%2Fmystore.com%3Finvoice_id%3D058921123&amp;key=[yourkeyhere]"</span>
 </code></pre>
+<blockquote>
+<p>Have your customer send bitcoin to the address contained in the response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"19jJyiC6DnKyKvPg38eBE8R6yCSXLLEjqw"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"index"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"callback"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mystore.com?invoice_id=058921123"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>PHP Example</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?</span>
+<span class="nv">$secret</span> <span class="o">=</span> <span class="s1">'ZzsMLGKe162CfA5EcG6j'</span><span class="p">;</span>
+
+<span class="nv">$my_xpub</span> <span class="o">=</span> <span class="s1">'{YOUR XPUB ADDRESS}'</span><span class="p">;</span>
+<span class="nv">$my_api_key</span> <span class="o">=</span> <span class="s1">'{YOUR API KEY}'</span><span class="p">;</span>
+
+<span class="nv">$my_callback_url</span> <span class="o">=</span> <span class="s1">'https://mystore.com?invoice_id=058921123&amp;secret='</span><span class="o">.</span><span class="nv">$secret</span><span class="p">;</span>
+
+<span class="nv">$root_url</span> <span class="o">=</span> <span class="s1">'https://api.blockchain.info/v2/receive'</span><span class="p">;</span>
+
+<span class="nv">$parameters</span> <span class="o">=</span> <span class="s1">'xpub='</span> <span class="o">.</span><span class="nv">$my_xpub</span><span class="o">.</span> <span class="s1">'&amp;callback='</span> <span class="o">.</span><span class="nb">urlencode</span><span class="p">(</span><span class="nv">$my_callback_url</span><span class="p">)</span><span class="o">.</span> <span class="s1">'&amp;key='</span> <span class="o">.</span><span class="nv">$my_api_key</span><span class="p">;</span>
+
+<span class="nv">$response</span> <span class="o">=</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="nv">$root_url</span> <span class="o">.</span> <span class="s1">'?'</span> <span class="o">.</span> <span class="nv">$parameters</span><span class="p">);</span>
+
+<span class="nv">$object</span> <span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="s1">'Send Payment To : '</span> <span class="o">.</span> <span class="nv">$object</span><span class="o">-&gt;</span><span class="na">address</span><span class="p">;</span>
+</code></pre>
+<p><code>GET https://api.blockchain.info/v2/receive?xpub=$xpub&amp;callback=$callback_url&amp;key=$key</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>xpub</td>
+<td>required</td>
+<td>Your xPub (where you would like the payment to be sent)</td>
+</tr>
+<tr>
+<td>callback_url</td>
+<td>required</td>
+<td>The callback URL to be notified when a payment is received. Remember to URL Encode the callback url when calling the create method.</td>
+</tr>
+<tr>
+<td>key</td>
+<td>required</td>
+<td>Your blockchain.info receive payments v2 api key. <a href="https://api.blockchain.info/v2/apikey/request/">Request an API key</a>.</td>
+</tr>
+<tr>
+<td>gap_limit</td>
+<td>optional</td>
+<td>How many unused addresses are allowed before erroring out.</td>
+</tr>
+</tbody></table>
+
+<p>As defined in BIP 44, wallet software will not scan past 20 unused addresses. Given enough requests from this API that don&#39;t have a matching payment, you could generate addresses past this horizon, which would make spending funds paid to those addresses quite difficult. For this reason, this API will return an error and refuse to generate new addresses if it detects it would create a gap of over 20 unused addresses. If you encounter this error, you will either need to switch to a new xPub (within the same wallet is fine), or receive a payment to one of the previous 20 created addresses</p>
+
+<p>You can control this behavior by optionally passing <code>gap_limit</code> as an extra URL parameter. Please note, this will not increase the number of addresses that will be monitored by our servers. Passing the <code>gap_limit</code> parameter changes the maximum allowed gap before the API will stop generating new addresses. Using this feature will require you understand the gap limitation and how to handle it (for advanced users only):</p>
+<h2 id='balance-updates'>Balance Updates</h2>
+<blockquote>
+<p>Monitor an address for every received payment with 5 confirmations:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -H <span class="s2">"Content-Type: text/plain"</span> --data <span class="s1">'{"key":"[your-key-here]","addr":"183qrMGHzMstARRh2rVoRepAd919sGgMHb","callback":"https://mystore.com?invoice_id=123","onNotification":"KEEP", "op":"RECEIVE", "confs": 5}'</span> https://api.blockchain.info/v2/receive/balance_update
+</code></pre>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"addr"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"183qrMGHzMstARRh2rVoRepAd919sGgMHb"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"op"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"RECEIVE"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"confs"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"callback"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mystore.com?invoice_id=123"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"onNotification"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"KEEP"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The id in the response can be used to delete the request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X DELETE <span class="s2">"https://api.blockchain.info/v2/receive/balance_update/70?key=[your-key-here]"</span>
+</code></pre>
+<blockquote>
+<p>Response:
+<code>json
+{ &quot;deleted&quot;: true }
+</code></p>
+</blockquote>
+
+<p>This method monitors an address of your choice for received and / or spent payments. You will be sent an HTTP notification immediately when a transaction is made, and subsequently when it reaches the number of confirmations specified in the request.</p>
+
+<p>You are required to specify the request&#39;s notification behaviour. Setting the behaviour to <code>DELETE</code> will delete the request after the first relelvant notification is sent to your callback address. Setting the behaviour to <code>KEEP</code> will send additional notifications every time a transaction with the specified confirmations and operation type is sent to or from the address in the request.</p>
+
+<p>Operation type is an optional parameter indicating whether the address will be monitored for received or spent transactions, or both. By default both operation types are monitored.</p>
+
+<p>You may also optionally specify the number of confirmations a transaction reaches before being sent a notification. Note that you will receive a notification at 0 confirmations (i.e. immediately when the transaction is made), and again when it reaches the number of confirmations specified in the request (3 confirmations by default).</p>
+
+<p><code>POST https://api.blockchain.info/v2/receive/balance_update</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>address</td>
+<td>required</td>
+<td>The address you would like to monitor</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>required</td>
+<td>The callback URL to be notified when a payment is received.</td>
+</tr>
+<tr>
+<td>key</td>
+<td>required</td>
+<td>Your blockchain.info receive payments v2 api key. <a href="https://api.blockchain.info/v2/apikey/request/">Request an API key</a>.</td>
+</tr>
+<tr>
+<td>onNotification</td>
+<td>required</td>
+<td>The request notification behaviour (&#39;KEEP&#39;</td>
+</tr>
+<tr>
+<td>confs</td>
+<td>3</td>
+<td>The number of confirmations the transaction needs to have before a notification is sent.</td>
+</tr>
+<tr>
+<td>op</td>
+<td>ALL</td>
+<td>The operation type you would like to receive notifications for (&#39;SPEND&#39;</td>
+</tr>
+</tbody></table>
+<h2 id='block-notification'>Block Notification</h2>
+<blockquote>
+<p>Request a single notification when the Bitcoin Blockchain reaches 500,000 blocks:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -H <span class="s2">"Content-Type: text/plain"</span> --data <span class="s1">'{"key":"[your-key-here]","height":500000,"callback":"https://mysite.com/block?request_id=1234","onNotification":"DELETE"}'</span> https://api.blockchain.info/v2/receive/block_notification
+</code></pre>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"height"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">500000</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"callback"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mysite.com/block?request_id=1234"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"confs"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"onNotification"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The id in the response can be used to delete the request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X DELETE <span class="s2">"https://api.blockchain.info/v2/receive/block_notifcation/64?key=[your-key-here]"</span>
+</code></pre>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This method allows you to request callbacks when a new block of a specified height and confirmation number is added to the blockchain.</p>
+
+<p>As with balance update requests, you are required to specify the request&#39;s notification behaviour to either &#39;KEEP&#39; or &#39;DELETE&#39;.</p>
+
+<p>Height is an optional parameter indicating at which height you would like to receive a block notification - if unspecified, this will be the height of the next block to arrive.</p>
+
+<p>Confs is another optional parameter indicating how many confirmations a block should have when a notification is sent.</p>
+
+<p><code>POST https://api.blockchain.info/v2/receive/block_notification</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>callback</td>
+<td>required</td>
+<td>The callback URL to be notified when a block that matches your query is added.</td>
+</tr>
+<tr>
+<td>key</td>
+<td>required</td>
+<td>Your blockchain.info receive payments v2 api key. <a href="https://api.blockchain.info/v2/apikey/request/">Request an API key</a>.</td>
+</tr>
+<tr>
+<td>onNotification</td>
+<td>required</td>
+<td>The request notification behaviour (&#39;KEEP&#39;</td>
+</tr>
+<tr>
+<td>confs</td>
+<td>1</td>
+<td>The number of confirmations the block should have before a notification is sent.</td>
+</tr>
+<tr>
+<td>height</td>
+<td>current height + 1</td>
+<td>The height at which a notification should be sent.</td>
+</tr>
+</tbody></table>
+<h2 id='implementing-the-callback'>Implementing the Callback</h2>
+<blockquote>
+<p>An example callback as a result of the PHP Example <a href="https://github.com/blockchain/receive-payments-demos">Full source code (PHP, Python, Ruby)</a>.</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?</span>
+<span class="nv">$real_secret</span> <span class="o">=</span> <span class="s1">'ZzsMLGKe162CfA5EcG6j'</span><span class="p">;</span>
+<span class="nv">$invoice_id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'invoice_id'</span><span class="p">];</span> <span class="c1">//invoice_id is passed back to the callback URL
+</span><span class="nv">$transaction_hash</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'transaction_hash'</span><span class="p">];</span>
+<span class="nv">$value_in_satoshi</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'value'</span><span class="p">];</span>
+<span class="nv">$value_in_btc</span> <span class="o">=</span> <span class="nv">$value_in_satoshi</span> <span class="o">/</span> <span class="mi">100000000</span><span class="p">;</span>
+
+<span class="c1">//Commented out to test, uncomment when live
+</span><span class="k">if</span> <span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'test'</span><span class="p">]</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">try</span> <span class="p">{</span>
+  <span class="c1">//create or open the database
+</span>  <span class="nv">$database</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SQLiteDatabase</span><span class="p">(</span><span class="s1">'db.sqlite'</span><span class="p">,</span> <span class="mo">0666</span><span class="p">,</span> <span class="nv">$error</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">die</span><span class="p">(</span><span class="nv">$error</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//Add the invoice to the database
+</span><span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"replace INTO invoice_payments (invoice_id, transaction_hash, value) values(?, ?, ?)"</span><span class="p">);</span>
+<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">bind_param</span><span class="p">(</span><span class="s2">"isd"</span><span class="p">,</span> <span class="nv">$invoice_id</span><span class="p">,</span> <span class="nv">$transaction_hash</span><span class="p">,</span> <span class="nv">$value_in_btc</span><span class="p">);</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">())</span> <span class="p">{</span>
+   <span class="k">echo</span> <span class="s2">"*ok*"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre><h3 id='receive-and-balance-update-callbacks'>Receive and Balance Update callbacks</h3>
+<p>Please note, the callback url is limited to 255 characters in length.</p>
+
+<p>When a payment is received by a generated address, or by an address monitored by a balance update request, blockchain.info will notify the callback URL you specify. For balance update callbacks and additional notification will be sent once the transaction reaches the specified number of confirmations.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>transaction_hash</td>
+<td>The payment transaction hash.</td>
+</tr>
+<tr>
+<td>address</td>
+<td>The destination bitcoin address (part of your xPub account).</td>
+</tr>
+<tr>
+<td>confirmations</td>
+<td>The number of confirmations of this transaction.</td>
+</tr>
+<tr>
+<td>value</td>
+<td>The value of the payment received (in satoshi, so divide by 100,000,000 to get the value in BTC).</td>
+</tr>
+<tr>
+<td>{custom}</td>
+<td>Any parameters included in the callback URL will be passed back to the callback URL in the notification. You can use this functionality to include parameters in your callback URL like invoice_id or customer_id to track which payments are associated with which of your customers.</td>
+</tr>
+</tbody></table>
+<h3 id='block-notification-callbacks'>Block Notification callbacks</h3>
+<p>A block notification is sent every time a new block is added to the blockchain, and matches the height and number of confirmations set in the notification request.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>hash</td>
+<td>The block hash.</td>
+</tr>
+<tr>
+<td>confirmations</td>
+<td>The number of confirmations of this block.</td>
+</tr>
+<tr>
+<td>height</td>
+<td>The block height.</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>The unix timestamp indicating when the block was added.</td>
+</tr>
+<tr>
+<td>size</td>
+<td>The block size in bytes.</td>
+</tr>
+<tr>
+<td>{custom}</td>
+<td>Any parameters included in the callback URL will be passed back to the callback URL in the notification.</td>
+</tr>
+</tbody></table>
+<h3 id='expected-callback-response'>Expected Callback Response</h3>
+<p>In order to acknowledge successful processing of the callback, your server should respond with the text &quot;<em>ok</em>&quot; (no quotes), in plain-text, no HTML. If the server responds with anything else, or nothing, the callback will be resent again for every new block (approximately every 10 minutes) up to 1000 times (1 week). Callback domains which appear dead or never return the &quot;<em>ok</em>&quot; response may be blocked from the service.</p>
+<h2 id='check-xpub-address-gap'>Check xPub address gap</h2>
+<blockquote>
+<p>Use the xPub you want to check and your API Key like so:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.blockchain.info/v2/receive/checkgap?xpub=[yourxpubhere]]&amp;key=[yourkeyhere]"</span>
+</code></pre>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"gap"</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Check the index gap between last address paid to and the last address generated using the using the checkgap endpoint.</p>
+<h2 id='callback-logs'>Callback Logs</h2>
+<blockquote>
+<p>Use the exact callback in question and your API key like so:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.blockchain.info/v2/receive/callback_log?callback=https%3A%2F%2Fmystore.com%3Finvoice_id%3D05892112%26secret%3DZzsMLGKe162CfA5EcG6j&amp;key=[yourkeyhere]"</span>
+</code></pre>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">[</span><span class="w">
+   </span><span class="p">{</span><span class="w">
+       </span><span class="s2">"callback"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mystore.com?invoice_id=058921123&amp;secret=ZzsMLGKe162CfA5EcG6j&amp;key=[yourkeyhere]"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"called_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-10-21T22:43:47Z"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"raw_response"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*bad*"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"response_code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="p">{</span><span class="w">
+       </span><span class="s2">"callback"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://mystore.com?invoice_id=058921123&amp;secret=ZzsMLGKe162CfA5EcG6j&amp;key=[yourkeyhere]"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"called_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-10-21T22:43:55Z"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"raw_response"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*bad*"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"response_code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>See logs related to callback attempts using the callback_logs endpoints.</p>
+<h2 id='security'>Security</h2>
+<p>A custom secret parameter should be included in the callback URL. The secret will be passed back to the callback script when the callback is fired, and should be checked by your code for validity. This prevents someone from trying to call your servers and falsely mark an invoice as &#39;paid&#39;.</p>
+<h2 id='currency-conversion'>Currency Conversion</h2>
+<p>Use the <a href="https://blockchain.info/api/exchange_rates_api">Exchange Rates API</a> to convert values in local currencies to BTC.
+If you would like convert payments received in Bitcoin to fiat currency quickly use a bitcoin address from an exchange wallet.</p>
+<h2 id='double-spends-amp-chargebacks'>Double Spends &amp; Chargebacks</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'confirmations'</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//Insert into confirmed payments
+</span>    <span class="k">echo</span> <span class="s1">'*ok*'</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">//Insert into pending payments
+</span>    <span class="c1">//Don't print *ok* so the notification resent again on next confirmation
+</span><span class="p">}</span>
+</code></pre>
+<p>A double spend occurs when a malicious user spends the same BTC twice. A payment that initial appears successful could be reversed at a later date. This is counteracted by waiting for the transaction to be included in the blockchain and reaching a number of confirmations. 6 confirmations is generally considered safe for high value transactions.</p>
+
+<p>Validate the transaction confirmations in the callback script by checking <code>confirmations</code> parameter. It is recommended you acknowledge the transaction at zero confirmations but only trust the transaction after one confirmation. For example, if purchasing a product, we would show the order as successful at zero confirmations (the first callback, but do not echo &quot;<em>ok</em>&quot; yet), but only ship the product when 4 or more confirmations are reached. See the PHP demo for an example.</p>
+<h2 id='address-expiration'>Address Expiration</h2>
+<p>Receive addresses never expire and will continue to be monitored until an &quot;<em>ok</em>&quot; is received in the callback response or blockchain.info has notified the callback 1000 times.</p>
+<h2 id='fair-usage'>Fair Usage</h2>
+<p>There is no limit to the number of receiving address which can be generated (as long as the 20 address gap limitation is met), the service is designed to monitor millions of addresses.</p>
+
+<p>Callback domains which appear dead or never return the &quot;<em>ok</em>&quot; response may be blocked from the service.</p>
+
 <blockquote>
 <p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
 </blockquote>
@@ -327,7 +749,7 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 <p>This endpoint retrieves all kittens.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<h3 id='query-parameters-4'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -432,8 +854,48 @@ Remember — a happy kitten is an authenticated kitten!
 <td>The ID of the kitten to delete</td>
 </tr>
 </tbody></table>
+<h1 id='payment-processing'>Payment Processing</h1><h2 id='introduction'>Introduction</h2>
+<p>The Blockchain Receive Payments API V2 is the quickest and easiest way to begin accepting automated bitcoin payments. Consisting of just a simple HTTP GET request, you can be up and running in minutes.</p>
+
+<p>One of the difficulties involved with receiving bitcoin payments is the need to generate a unique address for each new user or invoice. These addresses need to monitored and stored securely. The blockchain receive payments API takes care of the generation and monitoring of addresses. We will notify your server using a simple callback whenever a payment is received.</p>
+<h2 id='requesting-an-api-key'>Requesting an API key</h2>
+<p>In order to use the Receive Payments API V2, please apply for an API key <a href="https://api.blockchain.info/v2/apikey/request/">here</a>. This API key is only for our Receive Payments API. You cannot use the standard blockchain wallet API key for Receive Payments V2, and vice versa.</p>
+<h2 id='obtaining-an-extended-public-key-xpub'>Obtaining an Extended Public Key (xPub)</h2>
+<p>This API requires you to have a BIP 32 account xPub in order to receive payments. The easiest way to start receiving payments is to open a <a href="https://blockchain.info/wallet/#/signup">Blockchain Wallet</a>. You should create a new account inside your wallet exclusively for transactions facilitated by this API. When making API calls, use the xPub for this account (located in <strong>Settings -&gt; Addresses -&gt; Manage -&gt; More Options -&gt; Show xPub</strong>).</p>
+
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"api_endpoint_here"</span>
+  -H <span class="s2">"Authorization: meowmeowmeow"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+</blockquote>
+
+<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+
+<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+
+<p><code>Authorization: meowmeowmeow</code></p>
+
+<aside class="notice">
+You must replace <code>meowmeowmeow</code> with your personal API key.
+</aside>
 <h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
 
 <p>The Kittn API uses the following error codes:</p>
 
@@ -445,7 +907,7 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>Bad Request -- Your request is invalid.</td>
 </tr>
 <tr>
 <td>401</td>
@@ -491,12 +953,6 @@ Remember — a happy kitten is an authenticated kitten!
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
-          </div>
       </div>
     </div>
   </body>
