@@ -820,6 +820,52 @@ If you would like convert payments received in Bitcoin to fiat currency quickly 
 
 <p>The Blockchain Wallet API provides a simple interface Merchants can use to programmatically interact with their wallet.</p>
 <h2 id='installation'>Installation</h2>
+<blockquote>
+<p>Python - Install via pip: <a href="https://github.com/blockchain/api-v1-client-python">Github</a></p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>pip install blockchain
+</code></pre>
+<blockquote>
+<p>Java - Add the following repository to your pom.xml: <a href="https://github.com/blockchain/api-v1-client-java">Github</a></p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code>    <span class="nt">&lt;repository&gt;</span>
+        <span class="nt">&lt;id&gt;</span>api-v1-client-java-mvn-repo<span class="nt">&lt;/id&gt;</span>
+        <span class="nt">&lt;url&gt;</span>https://raw.githubusercontent.com/blockchain/api-v1-client-java/mvn-repo/<span class="nt">&lt;/url&gt;</span>
+        <span class="nt">&lt;snapshots&gt;</span>
+            <span class="nt">&lt;enabled&gt;</span>true<span class="nt">&lt;/enabled&gt;</span>
+            <span class="nt">&lt;updatePolicy&gt;</span>always<span class="nt">&lt;/updatePolicy&gt;</span>
+        <span class="nt">&lt;/snapshots&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+</code></pre>
+<blockquote>
+<p>Add the following dependency to your pom.xml:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code>  <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>info.blockchain<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>api<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>LATEST<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/dependency&gt;</span>
+</code></pre>
+<blockquote>
+<p>.NET (C#) - Installation via NuGet: <a href="https://github.com/blockchain/api-v1-client-csharp">Github</a></p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="gp">PM&gt; </span>Install-Package BlockchainAPI
+</code></pre>
+<blockquote>
+<p>Ruby - Installation via RubyGems: <a href="https://github.com/blockchain/api-v1-client-ruby">Github</a></p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>gem install blockchain
+</code></pre>
+<blockquote>
+<p>PHP - Composer install support is available. Or, download/clone the repository. Copy the src/ folder into your project and add: <a href="https://github.com/blockchain/api-v1-client-php">Github</a></p>
+</blockquote>
+<pre class="highlight plaintext"><code>require_once('src/Blockchain.php');
+</code></pre>
+<blockquote>
+<p>Node - Installation via <code>npm</code>: <a href="https://github.com/blockchain/api-v1-client-node">Github</a></p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>npm install blockchain.info
+</code></pre>
 <p>To use this API, you will need to run a small local service which will be responsible for managing your Blockchain Wallet. Your application interacts with this service locally via HTTP API calls. <a href="https://github.com/blockchain/service-my-wallet-v3">Click here for complete setup instructions on GitHub</a>.</p>
 <h2 id='create-wallet-api'>Create Wallet API</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://localhost:3000/api/v2/create?password=xxx&amp;api_code=[api
 key]&amp;email=user@email.com"</span>
