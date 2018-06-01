@@ -413,6 +413,8 @@ curl "https://blockchain.info/unconfirmed-transactions?format=json"
 }
 ```
 
+`GET https://blockchain.info/unconfirmed-transactions?format=json`
+
 ## Blocks
 
 ```shell
