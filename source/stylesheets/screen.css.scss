@@ -85,8 +85,8 @@ html, body {
 
     input {
       border: none;
-      background: $nav-bg;
-      padding: 10px 0 10px 0;
+      background: #dedede;
+      padding: 10px;
       box-sizing: border-box;
       margin: $nav-v-padding $nav-padding;
       width: $nav-width - $nav-padding - $nav-padding;
@@ -94,11 +94,7 @@ html, body {
       color: $nav-text;
       border-radius: 2px; /* ios has a default border radius */
       transition: padding .5s ease;
-      
-      &:focus {
-          background-color: #dedede;
-          padding-left: 10px;
-      }
+
     }
   }
 
@@ -112,15 +108,15 @@ html, body {
     transition-duration: 180ms;
     transition-timing-function: ease-in-out;
     background: inherit;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    
     &.visible {
       height: 30%;
       margin-bottom: 1em;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
     }
 
     li {
       margin: 1em $nav-padding;
-      line-height: 1.4;
     }
 
     a {
