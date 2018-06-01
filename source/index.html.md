@@ -11,6 +11,8 @@ includes:
   - data
   - plain
   - websocket
+  - markets
+  - charts
   - errors
 
 search: true
