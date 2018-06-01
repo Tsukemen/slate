@@ -6,6 +6,59 @@ The Blockchain Wallet API provides a simple interface Merchants can use to progr
 
 ## Installation
 
+> Python - Install via pip: [Github](https://github.com/blockchain/api-v1-client-python)
+
+```shell
+$ pip install blockchain
+```
+
+> Java - Add the following repository to your pom.xml: [Github](https://github.com/blockchain/api-v1-client-java)
+
+```xml
+    <repository>
+        <id>api-v1-client-java-mvn-repo</id>
+        <url>https://raw.githubusercontent.com/blockchain/api-v1-client-java/mvn-repo/</url>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+        </snapshots>
+    </repository>
+```
+
+> Add the following dependency to your pom.xml:
+
+```xml
+  <dependency>
+    <groupId>info.blockchain</groupId>
+    <artifactId>api</artifactId>
+    <version>LATEST</version>
+  </dependency>
+```
+
+> .NET (C#) - Installation via NuGet: [Github](https://github.com/blockchain/api-v1-client-csharp)
+
+```shell
+PM> Install-Package BlockchainAPI
+```
+
+> Ruby - Installation via RubyGems: [Github](https://github.com/blockchain/api-v1-client-ruby)
+
+```shell
+$ gem install blockchain
+```
+
+> PHP - Composer install support is available. Or, download/clone the repository. Copy the src/ folder into your project and add: [Github](https://github.com/blockchain/api-v1-client-php)
+
+```text
+require_once('src/Blockchain.php');
+```
+
+> Node - Installation via `npm`: [Github](https://github.com/blockchain/api-v1-client-node)
+
+```shell
+$ npm install blockchain.info
+```
+
 To use this API, you will need to run a small local service which will be responsible for managing your Blockchain Wallet. Your application interacts with this service locally via HTTP API calls. [Click here for complete setup instructions on GitHub](https://github.com/blockchain/service-my-wallet-v3).
 
 ## Create Wallet API
