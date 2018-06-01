@@ -121,9 +121,9 @@ Parameter | Default | Description
 address | required | The address you would like to monitor
 callback | required | The callback URL to be notified when a payment is received.
 key | required | Your blockchain.info receive payments v2 api key. [Request an API key](https://api.blockchain.info/v2/apikey/request/).
-onNotification | required | The request notification behaviour ('KEEP' | 'DELETE')
+onNotification | required | The request notification behaviour ('KEEP' &#124; 'DELETE')
 confs | 3 | The number of confirmations the transaction needs to have before a notification is sent.
-op | ALL | The operation type you would like to receive notifications for ('SPEND' | 'RECEIVE' | 'ALL').
+op | ALL | The operation type you would like to receive notifications for ('SPEND' &#124; 'RECEIVE' &#124; 'ALL').
 
 
 ## Block Notification
@@ -174,7 +174,7 @@ Parameter | Default | Description
 --------- | ------- | -----------
 callback | required | The callback URL to be notified when a block that matches your query is added.
 key | required | Your blockchain.info receive payments v2 api key. [Request an API key](https://api.blockchain.info/v2/apikey/request/).
-onNotification | required | The request notification behaviour ('KEEP' | 'DELETE')
+onNotification | required | The request notification behaviour ('KEEP' &#124; 'DELETE')
 confs | 1 | The number of confirmations the block should have before a notification is sent.
 height | current height + 1 | The height at which a notification should be sent.
 
