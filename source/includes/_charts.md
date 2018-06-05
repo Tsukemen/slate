@@ -39,7 +39,7 @@ Get the data behind Blockchain's charts
 
 `GET https://api.blockchain.info/charts/$chartName`
 
-Example: [https://api.blockchain.info/charts/transactions-per-second?timespan=5weeks&rollingAverage=8hours&format=json](https://api.blockchain.info/charts/transactions-per-second?timespan=5weeks&rollingAverage=8hours&format=json)
+Example: [Link](https://api.blockchain.info/charts/transactions-per-second?timespan=5weeks&rollingAverage=8hours&format=json)
 
 ### Path Parameters
 
@@ -88,7 +88,7 @@ Get the data behind Blockchain's stats
 
 `GET https://api.blockchain.info/stats`
 
-Example: [https://api.blockchain.info/stats](https://api.blockchain.info/stats)
+Example: [Link](https://api.blockchain.info/stats)
 
 ## Pools
 
@@ -127,7 +127,7 @@ Get the data behind Blockchain's pools information
 
 `GET https://api.blockchain.info/pools`
 
-Example: [https://api.blockchain.info/pools?timespan=5days](https://api.blockchain.info/pools?timespan=5days)
+Example: [Link](https://api.blockchain.info/pools?timespan=5days)
 
 ### Query Parameters
 
